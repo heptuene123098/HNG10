@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>HEPHZIBAH OTUENE HNG10 FRONTEND TASK 1</title>
+</head>
+<body>
+<h1 data-testid="slackUserName">HEPHZIBAH OTUENE</h1>
+<img src="https://ca.slack-edge.com/T05FFAA91JP-U05S1E2PENL-2596bbebc137-512" alt="Hephzibah Otuene" data-testid="slackDisplayImage">
+<p data-testid="currentDayOfTheWeek">
+<script>
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDayIndex = new Date().getUTCDay();
+    const currentDay = daysOfWeek[currentDayIndex];
+    document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${currentDay}`;</script>
+</p>
+<p data-testid="currentUTCTime">
+    <script>
+    // Function to get the current UTC time in milliseconds
+    function getCurrentUTCTime() {
+        return new Date().getTime();
+    }
+
+    // Get the current UTC time in milliseconds
+    var currentUTCTime = getCurrentUTCTime();
+
+    // Display the current UTC time in the element with the data-testid attribute
+    var element = document.querySelector('[data-testid="currentUTCTime"]');
+    element.textContent = "Current UTC Time (milliseconds): " + currentUTCTime;
+    </script>
+</p>
+<p data-testid="myTrack">Frontend</p>
+<a href="https://github.com/heptuene123098/HNG10.git" data-testid="githubURL">GitHub Repository</a>
+
+</body>
+</html>
